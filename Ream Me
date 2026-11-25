@@ -1,0 +1,129 @@
+# 🌍 Global Earthquake Analysis (2015–2025)
+
+An end-to-end Python data analysis project exploring over 300,000 global earthquake records using data from the **USGS Earthquake Catalog**.
+
+This project investigates earthquake frequency, magnitude, depth, geographic distribution, regional hotspots, spatial clustering, and unusual seismic activity through statistical analysis and geographic visualization.
+
+**Repository:** [github.com/MahnoorJaved98/Global-Earthquake-Analysis](https://github.com/MahnoorJaved98/Global-Earthquake-Analysis)
+
+---
+
+## 📌 Project Overview
+
+Earthquakes occur continuously around the world, but their frequency, magnitude, and geographic distribution vary significantly.
+
+This project analyzes earthquake activity from January 2015 to December 2025 to identify patterns and explore how major seismic events influence global earthquake records.
+
+Using Python, the project combines data collection, exploratory data analysis, geographic mapping, clustering algorithms, and statistical anomaly detection.
+
+## 🎯 Project Objectives
+
+- Explore global earthquake activity over a decade.
+- Analyze yearly and monthly earthquake trends.
+- Understand the distribution of earthquake magnitudes and depths.
+- Identify geographic regions with high earthquake activity.
+- Visualize earthquake epicentres on global maps.
+- Detect spatial clusters using DBSCAN.
+- Identify unusual global and regional earthquake activity.
+- Examine relationships between earthquake variables.
+
+## 🛠️ Technologies & Libraries
+
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Pandas | Data manipulation and analysis |
+| NumPy | Numerical computations |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualizations |
+| Cartopy | Geographic mapping |
+| Folium | Interactive earthquake maps |
+| Scikit-learn | DBSCAN clustering |
+| Requests | Retrieving data from the USGS API |
+
+## 📊 Dataset
+
+**Source:** [USGS Earthquake Catalog](https://earthquake.usgs.gov/fdsnws/event/1/)
+
+- Time period: January 2015 – December 2025
+- Minimum magnitude: 2.5
+- Data format: GeoJSON
+- Approximate records analyzed: 313,000+
+- Geographic coverage: Global
+
+The dataset includes:
+- Magnitude
+- Latitude and longitude
+- Depth
+- Date and time
+- Geographic location
+- Significance
+- Reported felt responses
+
+## 🔍 Analysis & Features
+
+### 1. Data Collection and Cleaning
+- Retrieve earthquake records from the USGS API.
+- Download data in monthly intervals.
+- Handle API record limits through interval splitting.
+- Remove duplicate and incomplete records.
+- Convert timestamps and prepare geographic coordinates.
+
+### 2. Exploratory Data Analysis
+- Examine dataset dimensions and descriptive statistics.
+- Identify the largest recorded earthquakes.
+- Explore magnitude and depth distributions.
+
+### 3. Geographic Visualization with Cartopy
+
+Generate global maps showing:
+- Earthquake density.
+- Magnitude distribution.
+- Depth distribution.
+- Major earthquakes (magnitude 6+).
+- Regional earthquake concentration.
+
+### 4. Time-Series Analysis
+- Analyze monthly earthquake frequency.
+- Compare yearly earthquake counts.
+- Identify periods of unusually high activity.
+
+### 5. Magnitude Analysis
+- Visualize earthquake magnitude distributions.
+- Categorize earthquakes by magnitude.
+- Compare distributions using different minimum magnitude thresholds.
+
+### 6. Depth Analysis
+- Classify earthquakes as shallow, intermediate, or deep.
+- Examine the relationship between depth and magnitude.
+
+### 7. Geographic Analysis
+- Map global earthquake epicentres.
+- Divide the world into 10° × 10° geographic grid cells.
+- Identify regions with the highest recorded earthquake counts.
+
+### 8. Interactive Mapping with Folium
+Create an interactive map where users can:
+- Zoom and navigate around the world.
+- Explore earthquake locations.
+- View magnitude, depth, date, and location details.
+
+### 9. Geographic Clustering with DBSCAN
+
+Apply the DBSCAN clustering algorithm to identify spatial concentrations of earthquakes.
+
+Configuration:
+- Distance threshold: 50 km
+- Minimum samples: 10
+- Distance metric: Haversine
+- Sample size: Up to 20,000 events
+
+### 10. Anomaly Detection
+
+Use rolling statistics and Z-scores to identify unusual earthquake activity.
+
+Two approaches are implemented:
+- Global daily earthquake activity anomalies.
+- Regional anomalies within individual geographic grid cells.
+
+### 
